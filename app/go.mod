@@ -1,1 +1,2 @@
-module github.com/example/hello-world
+module github.com/example/hello-world 
+go 1.22
