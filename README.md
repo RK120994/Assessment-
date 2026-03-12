@@ -4,19 +4,6 @@ This repository contains a simple **Go "Hello World" web application**, along wi
 It demonstrates containerization, Kubernetes deployment with Helm, and CI/CD automation.
 
 ---
-
-## Project Structure
-├── Dockerfile # Multi-stage Dockerfile for Go app
-├── .github/workflows/ci.yml # GitHub Actions CI workflow
-├── app/
-│ ├── main.go # Go web server
-│ └── go.mod
-├── helm/
-│ ├── hello-world/ # Helm chart for this app
-│ └── lib-common/ # Library chart with reusable templates
-└── README.md
----
-
 ## Prerequisites
 
 - Docker (I used Docker Desktop)
@@ -39,6 +26,7 @@ helm upgrade --install hello-world ./helm/hello-world
 
 ##**Access the Application**
 kubectl port-forward svc/hello-world-hello-world 8080:80
-http://localhost:8080         # Hello World page
+http://localhost:8080         - Hello World page
+http://localhost:8080/healthz  - Health check endpoint
 http://localhost:8080/healthz # Health check endpoint
 
