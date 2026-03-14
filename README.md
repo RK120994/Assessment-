@@ -28,5 +28,5 @@ helm upgrade --install hello-world ./helm/hello-world
 kubectl port-forward svc/hello-world-hello-world 8080:80
 http://localhost:8080         - Hello World page
 http://localhost:8080/healthz  - Health check endpoint
-http://localhost:8080/healthz # Health check endpoint
+
 
